@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class LoginController implements Initializable {
 	
@@ -71,7 +72,7 @@ public class LoginController implements Initializable {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Interface.fxml"));
 			Stage cenaPrincipal = new Stage();
-			cenaPrincipal.setResizable(false);
+			cenaPrincipal.initStyle(StageStyle.UNDECORATED);
 			cenaPrincipal.setScene(new Scene(root, 537, 289));
 			cenaPrincipal.show();
 			

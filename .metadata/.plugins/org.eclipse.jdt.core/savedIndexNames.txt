@@ -8,5 +8,4 @@ INDEX VERSION 1.131+C:\Projeto Java\.metadata\.plugins\org.eclipse.jdt.core
 3252599612.index
 1289320443.index
 3951807986.index
-3451103039.index
 662066769.index
