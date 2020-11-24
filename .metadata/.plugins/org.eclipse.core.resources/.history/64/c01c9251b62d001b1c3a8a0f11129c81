@@ -1,0 +1,16 @@
+package controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class LoginController {
+	@FXML
+	private Button brCancelar;
+	
+	public void cancelButtonOnAction(ActionEvent event) {
+		Stage stage =(Stage btCancelar.getScene().getWindows());
+		satage.close();
+	}
+}

@@ -1,0 +1,8 @@
+package dao;
+
+import javafx.scene.control.ListCell;
+import model.Maquina;
+
+public class MaquinaDao extends Maquina{
+	
+}

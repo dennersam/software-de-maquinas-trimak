@@ -1,0 +1,33 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Maquina;
+
+public class MaquinaDao extends Maquina{
+	public List<Maquina> listar(){
+		List<Maquina> maquinas = new ArrayList<Maquina>();
+		
+		try {
+			Connection con = new ConnectionFactory().getConnerction();
+			PreparedStatement smt = con.prepareStatement("select * from test");
+			ResultSet rs = smt.executeQuery();
+			
+			while(rs.next()) {
+				Maquina m = new Maquina();
+				m.setMaquina(rs.getString("IDOBJOF"));
+				m.setDataColeta(rs.getDate("DATACOLETA"));
+			}
+			
+			rs.close();
+			smt.close();
+			con.close();
+		}catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}

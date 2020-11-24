@@ -1,0 +1,7 @@
+module module.java {
+	requires javafx.controls;
+	requires java.sql;
+	
+	opens basico;
+	opens aplication;
+}

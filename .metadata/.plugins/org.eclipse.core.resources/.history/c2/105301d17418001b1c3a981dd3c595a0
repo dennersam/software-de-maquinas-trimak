@@ -1,0 +1,13 @@
+package dao;
+
+import java.sql.*;
+
+public class ConnectionFactory {
+	public Connection getConnection() {
+		try {
+			return DriverManager.getConnection("");
+		}catch(SQLException e){
+			
+		}
+	}
+}

@@ -1,0 +1,8 @@
+package aplication;
+import java.sql.*;
+
+public class DbConnect {
+	String connectionUrl = "jdbc:sqlserver://localhost:1433" + "databaseName=trimak";
+	
+	
+}
