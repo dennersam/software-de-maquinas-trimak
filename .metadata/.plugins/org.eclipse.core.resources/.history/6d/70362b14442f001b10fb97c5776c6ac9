@@ -16,7 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import view.Interface;
 
 public class LoginController implements Initializable {
 	
@@ -63,6 +62,7 @@ public class LoginController implements Initializable {
 	public void validateLogin(String user, String pass) {		
 		if(user.contentEquals("admin") && pass.contentEquals("admin")) {
 			lbMessageLogin.setText("Usuário entrou com sucesso!");
+			cancelButtonOnAction();
 			formularioPrincipal();
 		} else {
 			lbMessageLogin.setText("Usuário e senha invalidos!");
@@ -71,8 +71,6 @@ public class LoginController implements Initializable {
 	
 	public void formularioPrincipal() {
 		try {
-			Interface stage = new Interface();
-			stage.stop();
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Interface.fxml"));
 			Stage cenaPrincipal = new Stage();
 			cenaPrincipal.setResizable(false);

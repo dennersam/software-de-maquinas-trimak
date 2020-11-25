@@ -15,7 +15,7 @@ public class Interface extends Application{
 		primaryStage.initStyle(StageStyle.UNDECORATED);
 		primaryStage.setScene(new Scene(telaLogin, 550, 400));
 		primaryStage.show();
-		
+		primaryStage.close();
 	}
 	
 	public static void main(String[] args) {

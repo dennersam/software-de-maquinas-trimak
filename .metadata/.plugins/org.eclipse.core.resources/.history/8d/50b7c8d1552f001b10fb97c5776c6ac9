@@ -71,8 +71,7 @@ public class LoginController implements Initializable {
 	
 	public void formularioPrincipal() {
 		try {
-			Interface stage = new Interface();
-			stage.stop();
+			primaryStage.getStage().close();
 			Parent root = FXMLLoader.load(getClass().getResource("/view/Interface.fxml"));
 			Stage cenaPrincipal = new Stage();
 			cenaPrincipal.setResizable(false);
