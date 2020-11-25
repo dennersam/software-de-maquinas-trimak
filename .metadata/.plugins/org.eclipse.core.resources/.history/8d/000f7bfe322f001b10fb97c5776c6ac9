@@ -32,8 +32,8 @@ public class LoginController implements Initializable {
 	@FXML
 	private PasswordField passField;
  	
-	String user;
-	String pass;
+	String user = "admin";
+	String pass = "admin";
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,7 +48,7 @@ public class LoginController implements Initializable {
 		if(userTextField.getText().isBlank() == false && passField.getText().isBlank() == false) {
 			user = userTextField.getText();
 			pass = passField.getText();
-			validateLogin(user, pass);
+			lbMessageLogin.setText(user + pass);
 		} else {
 			lbMessageLogin.setText("Por favor, insira seu usuário e senha.");
 		}
@@ -59,8 +59,8 @@ public class LoginController implements Initializable {
 		stage.close();
 	}
 	
-	public void validateLogin(String user, String pass) {
-		if(user == "admin" && pass == "admin") {
+	public void validateLogin() {
+		if(userTextField.getText() == user && passField.getText() == pass) {
 			formularioPrincipal();
 		} else {
 			lbMessageLogin.setText("Usuário e senha invalidos!");

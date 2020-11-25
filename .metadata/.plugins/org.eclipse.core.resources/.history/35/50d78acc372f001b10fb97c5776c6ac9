@@ -32,8 +32,8 @@ public class LoginController implements Initializable {
 	@FXML
 	private PasswordField passField;
  	
-	String user;
-	String pass;
+	String user = "admin";
+	String pass = "admin";
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -60,6 +60,8 @@ public class LoginController implements Initializable {
 	}
 	
 	public void validateLogin(String user, String pass) {
+		lbMessageLogin.setText(user + pass);
+
 		if(user == "admin" && pass == "admin") {
 			formularioPrincipal();
 		} else {

@@ -14,7 +14,7 @@
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="login_painel.svg"
-   inkscape:export-filename="C:\Projeto Java\Trimak\src\login_painel.png"
+   inkscape:export-filename="C:\Projeto Java\Trimak\src\img\login_painel.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -51,9 +51,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="148.94604"
-     inkscape:cy="228.21885"
+     inkscape:zoom="1.979899"
+     inkscape:cx="107.89938"
+     inkscape:cy="140.33846"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -81,14 +81,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#000055;fill-rule:evenodd;stroke-width:0.278687;fill-opacity:1"
+       style="fill:#000055;fill-opacity:1;fill-rule:evenodd;stroke-width:0.278687"
        id="rect10"
        width="60.325001"
        height="107.68542"
        x="0"
        y="0" />
     <g
-       transform="matrix(0.15320373,0,0,-0.15320373,-139.55942,161.15155)"
+       transform="matrix(0.15320373,0,0,-0.15320373,-139.15852,152.83875)"
        inkscape:label="Background Trimak 2"
        id="g3884">
       <g
@@ -212,35 +212,35 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:2.80261px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.175163"
-       x="31.373243"
-       y="57.133739"
+       style="font-style:normal;font-weight:normal;font-size:4.1738px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:0.260861"
+       x="30.692282"
+       y="55.469406"
        id="text1058"><tspan
          sodipodi:role="line"
          id="tspan1056"
-         x="31.373243"
-         y="57.133739"
-         style="font-size:2.80261px;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.175163">Software de edição </tspan><tspan
+         x="30.692282"
+         y="55.469406"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.1738px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke-width:0.260861">Software de edição </tspan><tspan
          sodipodi:role="line"
-         x="31.373243"
-         y="60.637001"
-         style="font-size:2.80261px;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.175163"
+         x="30.692282"
+         y="60.686653"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.1738px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke-width:0.260861"
          id="tspan1060">de máquinas</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:1.94369px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.121481"
-       x="4.56106"
-       y="101.88308"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.76657px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.172912"
+       x="3.6155875"
+       y="100.68893"
        id="text1058-7"><tspan
          sodipodi:role="line"
-         x="4.56106"
-         y="101.88308"
-         style="font-size:1.94369px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.121481"
+         x="3.6155875"
+         y="100.68893"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.76657px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.172912"
          id="tspan1060-3">Autor: Denner</tspan><tspan
          sodipodi:role="line"
-         x="4.56106"
-         y="104.31269"
-         style="font-size:1.94369px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.121481"
+         x="3.6155875"
+         y="104.14714"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.76657px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.172912"
          id="tspan1085">Contato: dennermpb@hotmail.com</tspan></text>
   </g>
 </svg>
