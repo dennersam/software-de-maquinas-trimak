@@ -9,14 +9,15 @@ public class GenericDao {
 	private Connection c;
 	
 	public Connection getConnection() throws ClassNotFoundException, SQLException {
-		String hostName = "localhost";
-		String dbName = "test";
-		String user = "sa";
-		String senha = "Dnr@210986";
+		String hostName = "173.173.20.45";
+		String dbName = "CorporeRM21102020";
+		String user = "rm";
+		String senha = "rm";
+
+		Connection c = DriverManager.getConnection(
+				String.format("jdbc:sqlserver://%s;databaseName=%s;user=%s;password=%s;", hostName, dbName, user, senha));
+		System.out.println("Conexão bem sucedida!");
 		
-		c = DriverManager.getConnection(
-				String.format("jdbc:sqlserver://%s:1433;databaseName=%s;user=%s;password=%s;", hostName, dbName, user, senha));
 		return c;
-		
 	}
 }
