@@ -1,3 +1,7 @@
 1606153478275	Rename resource 'login.fxml.fxml'
 1606155876348	Move file
 1606155878972	Move file
+1606390761130	Rename type 'Interface'
+1606393004011	Rename resource 'Interface.fxml'
+1606396416565	Rename type 'InterfaceController'
+1606396460424	Rename resource 'Interface.css'

@@ -5,10 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -16,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import view.Interface;
+import view.Main;
 
 public class LoginController implements Initializable {
 	
@@ -45,7 +42,6 @@ public class LoginController implements Initializable {
 	
 	
 	public void loginButtonOnAction(ActionEvent event) {
-
 		if(userTextField.getText().isBlank() == false && passField.getText().isBlank() == false) {
 			user = userTextField.getText();
 			pass = passField.getText();
@@ -71,14 +67,7 @@ public class LoginController implements Initializable {
 	
 	public void formularioPrincipal() {
 		try {
-			Interface stage = new Interface();
-			stage.stop();
-			Parent root = FXMLLoader.load(getClass().getResource("/view/Interface.fxml"));
-			Stage cenaPrincipal = new Stage();
-			cenaPrincipal.setResizable(false);
-			cenaPrincipal.setScene(new Scene(root, 537, 289));
-			cenaPrincipal.show();
-			
+			Main.changeScene("main");			
 		} catch (Exception e){
 			e.printStackTrace();
 			e.getCause();
