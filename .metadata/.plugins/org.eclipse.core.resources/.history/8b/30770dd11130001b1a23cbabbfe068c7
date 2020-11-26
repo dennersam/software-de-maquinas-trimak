@@ -58,6 +58,7 @@ public class LoginController implements Initializable {
 	
 	public void validateLogin(String user, String pass) {		
 		if(user.contentEquals("admin") && pass.contentEquals("admin")) {
+			lbMessageLogin.setText("Usuário entrou com sucesso!");
 			formularioPrincipal();
 		} else {
 			lbMessageLogin.setText("Usuário e senha invalidos!");

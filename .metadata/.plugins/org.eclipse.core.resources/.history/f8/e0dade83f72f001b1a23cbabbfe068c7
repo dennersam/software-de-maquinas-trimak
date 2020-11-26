@@ -1,0 +1,21 @@
+package controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+public class MainController{
+	
+	@FXML
+	private Button btnSair;
+	
+	@FMXL
+	//private 
+	
+	public void sairButtonOnAction(ActionEvent event) {
+		Stage stage = (Stage) btnSair.getScene().getWindow();
+		stage.close();
+	}
+	
+}

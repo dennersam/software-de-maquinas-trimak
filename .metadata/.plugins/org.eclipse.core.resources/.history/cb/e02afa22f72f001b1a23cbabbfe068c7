@@ -38,12 +38,12 @@
       <Button fx:id="btnEditar" disable="true" layoutX="26.0" layoutY="241.0" mnemonicParsing="false" text="Editar" />
       <Button fx:id="btnSalvar" disable="true" layoutX="88.0" layoutY="241.0" mnemonicParsing="false" text="Salvar" />
       <Button fx:id="btnCancelar" disable="true" layoutX="153.0" layoutY="241.0" mnemonicParsing="false" text="Cancelar" />
-      <Button fx:id="btnSair" layoutX="475.0" layoutY="241.0" mnemonicParsing="false" onAction="#sairButtonOnAction" text="Sair" />
+      <Button layoutX="475.0" layoutY="241.0" mnemonicParsing="false" text="Sair" />
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="537.0">
         <menus>
           <Menu mnemonicParsing="false" text="Arquivo">
             <items>
-              <MenuItem fx:id="menuItemSair" mnemonicParsing="false" onAction="#sairMenuOnAction" text="Sair" />
+              <MenuItem fx:id="menuSair" mnemonicParsing="false" onAction="#sairButtonOnAction" text="Sair" />
             </items>
           </Menu>
         </menus>

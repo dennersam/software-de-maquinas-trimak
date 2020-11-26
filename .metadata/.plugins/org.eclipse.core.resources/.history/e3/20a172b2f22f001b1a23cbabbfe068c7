@@ -35,7 +35,7 @@ public class LoginController implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
-		File fotoTrimak = new File("src/img/login_painel1.png");
+		File fotoTrimak = new File("src/img/login_painel.png");
 		Image imgLocal = new Image(fotoTrimak.toURI().toString());
 		imgTrimak.setImage(imgLocal);
 	}
@@ -58,6 +58,7 @@ public class LoginController implements Initializable {
 	
 	public void validateLogin(String user, String pass) {		
 		if(user.contentEquals("admin") && pass.contentEquals("admin")) {
+			lbMessageLogin.setText("Usuário entrou com sucesso!");
 			formularioPrincipal();
 		} else {
 			lbMessageLogin.setText("Usuário e senha invalidos!");

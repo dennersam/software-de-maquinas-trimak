@@ -1,8 +1,5 @@
 package controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,25 +14,13 @@ public class MainController{
 	@FXML
 	private MenuItem menuItemSair;
 	
-	public void sairButtonOnAction(ActionEvent click) {
+	public void sairButtonOnAction(ActionEvent event) {
 		Stage stage = (Stage) btnSair.getScene().getWindow();
 		stage.close();
-		//System.exit(0);
 	}
 	
 	public void sairMenuOnAction(ActionEvent event) {
-		System.exit(0);
-	}
-	
-	public void pesquisarButtonOnAction(ActionEvent click) {
-		try {
-			Connection connection = DriverManager.getConnection(url,[])
-					
-		} catch (Exception e) {
-			// TODO: handle exception
-		} {
-			
-		}
+		System.out.close();
 	}
 	
 }

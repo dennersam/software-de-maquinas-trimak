@@ -18,7 +18,7 @@ public class Main extends Application{
 		stage = primaryStage;
 		
 		Parent cenaLogin = FXMLLoader.load(getClass().getResource("login.fxml"));
-		loginScene = new Scene(cenaLogin, 700, 500);
+		loginScene = new Scene(cenaLogin, 512, 400);
 		
 		Parent telaMain = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		mainScene = new Scene(telaMain, 537, 289);
