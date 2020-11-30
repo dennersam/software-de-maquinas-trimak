@@ -1,0 +1,44 @@
+package controller;
+
+import java.sql.SQLException;
+
+import javafx.scene.control.TextField;
+import model.Maquina;
+
+public class MaquinaController implements IMaquinaController {
+	
+	private TextField txMaquina;
+	private TextField txDataColeta;
+	private TextField txMHoraUso;
+	private TextField txMTrocaOleo;
+	private TextField txMUInsp;
+	private TextField txAHoraUso;
+	private TextField txATrocaOleo;
+	private TextField txAUInsp;
+	
+	
+	@Override
+	public void pesquisaMaquina(Maquina p) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void editaMaquina(Maquina p) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void salvaMaquina(Maquina p) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancelaMaquina(Maquina p) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

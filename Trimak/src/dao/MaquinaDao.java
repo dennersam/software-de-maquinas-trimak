@@ -18,7 +18,7 @@ public class MaquinaDao implements IMaquinaDao{
 	}
 
 	@Override
-	public void pesquisarMaquina(Maquina p) throws SQLException {
+	public Maquina pesquisarMaquina(Maquina p) throws SQLException {
 		String sql = "SELECT datacoleta, valormedidor2, valormedidor5, valormedidor3, valoracumulado2, valoracumulado5, valoracumulado3 FROM ofhistindicador WHERE idobjof = ?";
 		
 		PreparedStatement ps = c.prepareStatement(sql);
@@ -28,15 +28,15 @@ public class MaquinaDao implements IMaquinaDao{
 		ResultSet rs = ps.executeQuery();
 		
 		if(rs.next()) {
-			p.setMaquina(rs.getString("maquina"));
-			p.setDataColeta(rs.getDate("datacoleta"));
+			p.setMaquina(rs.getString("idobjof"));
+			p.setDataColeta(rs.getDate("datacoleta"));   //converter aqui de data para string
 			p.setValorMedidor2(rs.getFloat("valormedidor2"));
 			p.setValorMedidor5(rs.getFloat("valormedidor5"));
 			p.setValorMedidor3(rs.getFloat("valormedidor3"));
 			p.setValorAcumulado2(rs.getFloat("valoracumulado2"));
 			p.setValorAcumulado5(rs.getFloat("valoracumulado5"));
 			p.setValorAcumulado3(rs.getFloat("valoracumulado3"));
-		
+			cont++;
 		}
 		
 		if(cont == 0) {
@@ -44,8 +44,7 @@ public class MaquinaDao implements IMaquinaDao{
 		}
 		rs.close();
 		ps.close();
-		 
-		
+		return p;
 	}
 
 	@Override

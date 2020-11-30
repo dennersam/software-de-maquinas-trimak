@@ -28,7 +28,7 @@
             <Label layoutX="49.0" layoutY="183.0" text="Usuário" />
             <TextField fx:id="userTextField" layoutX="108.0" layoutY="179.0" prefHeight="28.0" prefWidth="173.0" />
             <Label layoutX="49.0" layoutY="225.0" text="Senha" />
-            <PasswordField fx:id="passField" layoutX="108.0" layoutY="221.0" prefHeight="28.0" prefWidth="173.0" />
+            <PasswordField fx:id="passField" layoutX="108.0" layoutY="221.0" onAction="#loginButtonOnAction" prefHeight="28.0" prefWidth="173.0" />
             <Button fx:id="btEntrar" layoutX="125.0" layoutY="286.0" mnemonicParsing="false" onAction="#loginButtonOnAction" style="-fx-background-color: #000055;" text="Entrar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
