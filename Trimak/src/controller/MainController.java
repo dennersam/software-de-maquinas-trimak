@@ -2,7 +2,6 @@ package controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
 import dao.MaquinaDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,22 +56,30 @@ public class MainController{
 	private MenuItem menuItemSair;
 	
 	@FXML
-	private Label lbNomeMaquina;
+	private MenuItem menuItemHelp;
 	
-	public void sairButtonOnAction(ActionEvent click) {
-		Stage stage = (Stage) btnSair.getScene().getWindow();
-		stage.close();
-		//System.exit(0);
-	}
+	@FXML
+	private Label lbNomeMaquina;
 	
 	public void sairMenuOnAction(ActionEvent event) {
 		System.exit(0);
 	}
 	
+	public void showHelpOnAction(ActionEvent event) {
+		menuItemHelp.setOnAction(HelpController.abrirHelp());
+	}
+	
+	public void sairButtonOnAction(ActionEvent event) {
+		Stage stage = (Stage) btnSair.getScene().getWindow();
+		stage.close();
+		//System.exit(0);
+	}
+	
+
 	public void pesquisarButtonOnAction(ActionEvent event) {
 		
 		MaquinaController maquinaController = new MaquinaController(txMaquina, txDataColeta, txMHoraUso, txMTrocaOleo, txMUInsp, txAHoraUso, txATrocaOleo, txAUInsp);
-		maquinaController.pesquisaMaquina(txMaquina);
+		maquinaController.pesquisaMaquina();
 	}
 	
 }

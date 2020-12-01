@@ -39,8 +39,7 @@ public class LoginController implements Initializable {
 		Image imgLocal = new Image(fotoTrimak.toURI().toString());
 		imgTrimak.setImage(imgLocal);
 	}
-	
-	
+		
 	public void loginButtonOnAction(ActionEvent event) {
 		if(userTextField.getText().isBlank() == false && passField.getText().isBlank() == false) {
 			user = userTextField.getText();
@@ -58,15 +57,15 @@ public class LoginController implements Initializable {
 	
 	public void validateLogin(String user, String pass) {		
 		if(user.contentEquals("admin") && pass.contentEquals("admin")) {
-			formularioPrincipal();
+			abrirPrograma();
 		} else {
 			lbMessageLogin.setText("Usuário e senha invalidos!");
 		}
 	}
 	
-	public void formularioPrincipal() {
+	public void abrirPrograma() {
 		try {
-			Main.changeScene("main");			
+			Main.changeScene("main");
 		} catch (Exception e){
 			e.printStackTrace();
 			e.getCause();
