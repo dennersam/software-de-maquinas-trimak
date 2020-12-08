@@ -28,7 +28,7 @@ public class MaquinaDao implements IMaquinaDao{
 		ResultSet rs = ps.executeQuery();
 		
 		if(rs.next()) {
-			p.setMaquina(rs.getString("idobjof"));
+			p.setnMaquina(rs.getString("idobjof"));
 			p.setDataColeta(rs.getDate("datacoleta"));   //converter aqui de data para string
 			p.setValorMedidor2(rs.getFloat("valormedidor2"));
 			p.setValorMedidor5(rs.getFloat("valormedidor5"));

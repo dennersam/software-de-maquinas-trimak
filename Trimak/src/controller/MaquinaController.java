@@ -8,7 +8,7 @@ import model.Maquina;
 
 public class MaquinaController implements IMaquinaController {
 	
-	private TextField txMaquina;
+	private TextField txnMaquina;
 	private TextField txDataColeta;
 	private TextField txMHoraUso;
 	private TextField txMTrocaOleo;
@@ -18,9 +18,9 @@ public class MaquinaController implements IMaquinaController {
 	private TextField txAUInsp;
 	
 	
-	public MaquinaController(TextField txMaquina, TextField txDataColeta, TextField txMHoraUso, TextField txMTrocaOleo,
+	public MaquinaController(TextField txnMaquina, TextField txDataColeta, TextField txMHoraUso, TextField txMTrocaOleo,
 			TextField txMUInsp, TextField txAHoraUso, TextField txATrocaOleo, TextField txAUInsp) {
-		this.txMaquina = txMaquina;
+		this.txnMaquina = txnMaquina;
 		this.txDataColeta = txDataColeta;
 		this.txMHoraUso = txMHoraUso;
 		this.txMTrocaOleo = txMTrocaOleo;
@@ -31,15 +31,20 @@ public class MaquinaController implements IMaquinaController {
 	}
 
 	@Override
-	public void pesquisaMaquina(Maquina p) throws ClassNotFoundException, SQLException {
+	public void pesquisarMaquina(Maquina p) throws ClassNotFoundException, SQLException {
 		limpaCamposMaquina();
 		
 		MaquinaDao pDao = new MaquinaDao();
 		pDao.pesquisarMaquina(p);
 		
-		txMaquina.setText(p.getMaquina());
+		txnMaquina.setText(p.getnMaquina());
 		txDataColeta.setText(String.valueOf(p.getDataColeta()));
-		
+		txMHoraUso.setText(String.valueOf(p.getValorMedidor2()));
+		txMTrocaOleo.setText(String.valueOf(p.getValorMedidor5()));
+		txMUInsp.setText(String.valueOf(p.getValorMedidor3()));
+		txAHoraUso.setText(String.valueOf(p.getValorAcumulado2()));
+		txATrocaOleo.setText(String.valueOf(p.getValorAcumulado5()));
+		txAUInsp.setText(String.valueOf(p.getValorAcumulado3()));
 	}
 
 	@Override
@@ -61,7 +66,7 @@ public class MaquinaController implements IMaquinaController {
 	}
 	
 	private void limpaCamposMaquina() {
-		txMaquina.setText("");
+		txnMaquina.setText("");
 		txDataColeta.setText("");
 		txMHoraUso.setText("");
 		txMTrocaOleo.setText("");

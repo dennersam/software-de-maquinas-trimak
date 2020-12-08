@@ -1,8 +1,8 @@
 package controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import dao.MaquinaDao;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,9 +10,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Maquina;
 
 public class MainController{
-	
+
 	@FXML
 	private TextField txDataColeta;
 	
@@ -26,7 +27,7 @@ public class MainController{
 	private TextField txMUInsp;
 	
 	@FXML
-	private TextField txMaquina;
+	private TextField txnMaquina;
 	
 	@FXML
 	private Button btnPesquisar;
@@ -66,7 +67,7 @@ public class MainController{
 	}
 	
 	public void showHelpOnAction(ActionEvent event) {
-		menuItemHelp.setOnAction(HelpController.abrirHelp());
+
 	}
 	
 	public void sairButtonOnAction(ActionEvent event) {
@@ -76,10 +77,28 @@ public class MainController{
 	}
 	
 
-	public void pesquisarButtonOnAction(ActionEvent event) {
+	public void pesquisarButtonOnAction(ActionEvent event) throws ParseException, ClassNotFoundException, SQLException {
+		String cmd = event.getSource().toString();
+		System.out.println(cmd);
 		
-		MaquinaController maquinaController = new MaquinaController(txMaquina, txDataColeta, txMHoraUso, txMTrocaOleo, txMUInsp, txAHoraUso, txATrocaOleo, txAUInsp);
-		maquinaController.pesquisaMaquina();
+		MaquinaController maquinaController = new MaquinaController(txnMaquina,
+				txDataColeta, txMHoraUso, txMTrocaOleo, txMUInsp, txAHoraUso, txATrocaOleo, txAUInsp);
+		
+		if((cmd.contains("Pesquisar")) && (txnMaquina.getText().isEmpty())) {
+			System.out.println("ERRO, campo não pode estar vazio!");
+			
+		}  else {
+			Maquina m = new Maquina();
+			m.setnMaquina(txnMaquina.getText());
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+			m.setDataColeta(formato.parse(txDataColeta.getText()));
+			m.setValorMedidor2(Float.valueOf(txMHoraUso.getText()));
+			m.setValorMedidor5(Float.valueOf(txMTrocaOleo.getText()));
+			m.setValorMedidor3(Float.valueOf(txMUInsp.getText()));
+			m.setValorAcumulado2(Float.valueOf(txAHoraUso.getText()));
+			m.setValorAcumulado5(Float.valueOf(txATrocaOleo.getText()));
+			m.setValorAcumulado3(Float.valueOf(txAUInsp.getText()));
+			maquinaController.pesquisarMaquina(m);
+		}
 	}
-	
 }
